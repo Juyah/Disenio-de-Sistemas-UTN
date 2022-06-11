@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width+device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="darEnAdopcion.css">
+    <title>Da en adopcion a tu mascota</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top" id="nav">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../inicio/home.html">
+            <img class="imgInicio" src="../imagenes/logo-largo.png"
+                 alt="logo">
+        </a>
+    </div>
+</nav>
+
+
+<div id="DarEnAdopcionVue">
+    <div class="menu">
+        <div class="row rowMenu">
+        <label class="col">Mascota Elegida:
+            <select v-model="mascotaElegida" @change="cambioMascota">
+                <option value="elegirMascota" disabled>Selecciona una opción</option>
+                <option v-for="mascota in mascotas" v-bind:value="mascota">{{ mascota.nombre }}</option>
+            </select>
+        </label>
+        <h3 id="mascotaElegidaStyle" class="col">{{mascotaElegida.organizacion}}</h3>
+        <img alt="" v-bind:src='mascotaElegida.foto' class="col">
+        </div>
+    </div>
+
+
+    <h2>❤️ Responde sobre tu mascota ❤️</h2>
+    <div class="menu">
+        <h3>Preguntas generales💬</h3>
+        <div class="row rowMenu">
+            <div class="col" style="overflow-x:auto;">
+                <table class="table table-bordered table-striped justify-content-center text-center">
+                    <tr>
+                        <th>Preguntas generales</th>
+                        <th>Respuesta</th>
+                    </tr>
+                    <tr v-for="pregunta in preguntasGenerales">
+                        <td>{{pregunta.name}}</td>
+                        <td><input type="text" placeholder="" v-model="pregunta.value"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <h3>Preguntas especificas🖊️</h3>
+        <div class="row rowMenu">
+            <div class="col" style="overflow-x:auto;">
+                <table class="table table-bordered table-striped">
+                    <tr>
+                        <th>Preguntas especificas</th>
+                        <th>Respuesta</th>
+                    </tr>
+                    <tr v-for="pregunta in preguntasOrganizacion">
+                        <td>{{pregunta.name}}</td>
+                        <td><input type="text" placeholder="" v-model="pregunta.value"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="botonFuera"><input id="botonRegistrar" type="submit" value="Dar en adopcion" v-on:click="enviarDatos"></div>
+
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="darEnAdopcion.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>

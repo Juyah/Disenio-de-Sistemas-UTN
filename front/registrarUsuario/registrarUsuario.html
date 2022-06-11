@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width+device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="registrarUsuario.css">
+    <title>¡Crea tu usuario!</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top" id="nav">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../inicio/home.html">
+            <img src="../imagenes/logo-largo.png"
+                 alt="logo">
+        </a>
+    </div>
+</nav>
+
+<div id="RegistrarUsuarioVue">
+    <h2>Registrate</h2>
+    <div id="menu">
+        <div class="row rowMenu">
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+                <label class="input-registro"> Usuario <br><input type="text" v-model="usuario"
+                                                                  placeholder="Ingrese su nombre de usuario"></label><br>
+                <label class="input-registro"> Contraseña <br><input type="password" v-model="contrasenia"
+                                                                     placeholder="Ingrese su contraseña"></label><br>
+                <label class="input-registro"> Repita la contraseña <br><input type="password"
+                                                                               v-model="repeticionContrasenia"
+                                                                               placeholder="Ingrese la misma contraseña"></label><br>
+                <br><input id="imagen" type="submit" value="Registrarse" v-on:click="enviarDatos">
+            </div>
+            <img src="img/perro-gato.jpg" alt="perro y gato" class="col-12 col-md-6">
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="registrarUsuario.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>

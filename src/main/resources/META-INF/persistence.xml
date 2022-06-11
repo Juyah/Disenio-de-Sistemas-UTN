@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+    <persistence-unit name="db" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <properties>
+            <property name="hibernate.archive.autodetection" value="class"/>
+
+            <!--<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />-->
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/rescatedepatitas"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="root"/>
+
+            <property name="hibernate.show_sql" value="true"/>
+            <!-- Enable the logging of all the generated SQL statements to the console -->
+
+            <property name="hibernate.format_sql" value="true"/>
+            <!-- Format the generated SQL statement to make it more readable -->
+
+            <property name="use_sql_comments" value="true"/>
+            <!-- Hibernate will put comments inside all generated SQL statements to hint what’s the generated SQL trying to do -->
+
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <!--
+                - validate: validate the schema, makes no changes to the database.
+                - update: update the schema.
+                - create: creates the schema, destroying previous data.
+                - create-drop: drop the schema when the SessionFactory is closed explicitly, typically when the application is stopped.
+                - none: does nothing with the schema, makes no changes to the database
+             -->
+        </properties>
+
+    </persistence-unit>
+
+</persistence>
+
+        <!--
+        <?xml version="1.0" encoding="UTF-8"?>
+        <persistence xmlns="http://java.sun.com/xml/ns/persistence"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+            http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+                     version="2.0">
+
+            <persistence-unit name="db" transaction-type="RESOURCE_LOCAL">
+                <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+                <properties>
+                    <property name="hibernate.archive.autodetection" value="class"/>
+
+                    <property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+                    <property name="hibernate.connection.url" value="jdbc:postgresql://ec2-3-220-59-239.compute-1.amazonaws.com:5432/d241mhjs2afjjn?user=ykxynrekidkluz&amp;password=4d13cdfa4399cc81a288a664891bee8e223b48f3473d067380122c167903cb8d" />
+                    <property name="hibernate.connection.username" value="ykxynrekidkluz" />
+                    <property name="hibernate.connection.password" value="d241mhjs2afjjn"/>
+
+                    <property name="hibernate.show_sql" value="true" />
+                    &lt;!&ndash; Enable the logging of all the generated SQL statements to the console &ndash;&gt;
+
+                    <property name="hibernate.format_sql" value="true" />
+                    &lt;!&ndash; Format the generated SQL statement to make it more readable &ndash;&gt;
+
+                    <property name="use_sql_comments" value="true" />
+                    &lt;!&ndash; Hibernate will put comments inside all generated SQL statements to hint what’s the generated SQL trying to do &ndash;&gt;
+
+                    <property name="hibernate.hbm2ddl.auto" value="update" />
+                    &lt;!&ndash;
+                        - validate: validate the schema, makes no changes to the database.
+                        - update: update the schema.
+                        - create: creates the schema, destroying previous data.
+                        - create-drop: drop the schema when the SessionFactory is closed explicitly, typically when the application is stopped.
+                        - none: does nothing with the schema, makes no changes to the database
+                     &ndash;&gt;
+                </properties>
+
+            </persistence-unit>
+
+        </persistence>
+        -->

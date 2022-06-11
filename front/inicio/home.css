@@ -1,0 +1,128 @@
+body {
+    background-image: url(../imagenes/fondo-pagina.png);
+}
+#elementoCerrarSesion{
+    display: none;
+}
+#menu {
+    background-color: #e0e0e0;
+    width: 80vw;
+    height: 80vh;
+    margin: 5vh 10vw;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.cajaInteractiva {
+    background-color: rgb(235, 218, 242);
+    border: 5px solid rgb(204, 101, 187);
+    height: 30vh;
+    border-radius: 5px;
+    display: table;
+    text-align: center;
+}
+
+#cajaRegistrarMascota {
+    background-image: url(img/registrar-mascota.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#cajaAdoptarMascota {
+    background-image: url(img/adoptar-mascota.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#cajaDarEnAdopcionMascota {
+    background-image: url(img/dar-en-adopcion-mascota.jpg);
+    background-size: cover;
+    background-position: right;
+}
+
+#cajaEncontreMascota {
+    background-image: url(img/encontre-mascota.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#cajaImagenPerro {
+    background: #D0E4F5 url("img/home-perro.png") no-repeat local 50% 50%;
+    background-size: cover;
+    border: 2px solid black;
+    height: 30vh;
+    border-radius: 5px;
+}
+
+#cajaImagenGato {
+    background: #D0E4F5 url("img/home-gato.jpg") no-repeat local 50% 50%;
+    background-size: cover;
+    border: 2px solid black;
+    height: 30vh;
+    border-radius: 5px;
+}
+
+#nav {
+    height: 7vh;
+}
+
+.botonMenu-full {
+    background-color: rgb(235, 218, 242);
+    box-shadow: 3px 3px 5px 6px rgb(204, 101, 187);
+}
+
+.botonNav-full {
+    background-color: rgb(235, 218, 242);
+    border: 2px solid rgb(204, 101, 187);
+    margin: 1vw;
+}
+
+.brandNav-small {
+    display: none;
+}
+
+
+.rowMenu {
+    padding-top: 5vh;
+}
+
+@media (max-width: 575px) {
+    #menu {
+        height: auto;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        background-color: transparent;
+        border: none;
+    }
+
+    .rowMenu {
+        margin: 0 auto;
+        padding-top: 1px;
+        padding-left: 3vh;
+        padding-right: 3vh;
+    }
+
+    #cajaInteractiva {
+        height: 20vh;
+    }
+
+    #desapareceCol {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .brandNav-full {
+        display: none;
+    }
+
+    .brandNav-small {
+        display: block;
+    }
+}
+
+@media (max-width: 350px) {
+    .botonNav-full {
+        font-size: small;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width+device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.9.0/build/ol.js"></script>
+
+    <link rel="stylesheet" href="encontreMascota.css">
+    <title> Regresa la mascota a casa <3 </title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand navbar-dark bg-dark static-top" id="nav">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../inicio/home.html">
+            <img src="../imagenes/logo-largo.png"
+                 alt="logo">
+        </a>
+    </div>
+</nav>
+
+<div id="EncontreMascotaVue">
+    <h2>Completa los datos y salva una mascota ❤️ </h2>
+    <div id="menu">
+        <div class="row rowMenu">
+            <label class="">Fotos de la mascota encontrada<br>
+                <input type="file" @change="agregarFotos($event)" accept="image/png, image/jpg, image/jpeg" multiple>
+            </label>
+            <label>Estado de la mascota <br><input type="text" v-model="descripcion" placeholder="¿En qué estado la encontró?"></label>
+        </div>
+
+        <label class="col">Dirección<br>
+            <input type="text" v-model="calle" placeholder="Calle" required>
+            <input type="text" v-model="altura" placeholder="Altura" required>
+            <input type="text" v-model="localidad" placeholder="Localidad" required>
+
+            <div id="map" class="map"></div><br>
+
+            <input id="botonValidar" type="submit" value="Validar" v-on:click="consultarDireccion">
+        </label>
+        <div><br>
+            <label id="SeleccionarOrg" style="display: none">
+                <select v-model="orgElegida">
+                    <option value="info" disabled>Seleccionar organizacion</option>
+                    <option v-for="organizacion in organizaciones" v-bind:value="organizacion">{{ organizacion }}
+                    </option>
+                </select>
+                <label style="font-size: small">Al seleccionar una organización, se creará una publicación en ella para qué la persona dueña pueda encontrar su mascota con las fotos.</label><br>
+            </label>
+            <input id="botonRegistrar" type="submit" value="Avisar al dueño" v-on:click="enviarDatos">
+        </div>
+    </div>
+</div>
+
+<div id="map" class="map">
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="encontreMascota.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>

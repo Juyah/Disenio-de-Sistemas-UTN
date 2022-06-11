@@ -1,0 +1,26 @@
+2. Diseño de casos de prueba para la funcionalidad de "Buscar un hogar de tránsito adecuado" incluida
+entre los requerimientos de la Entrega 2
+
+Criterios:
+- Capacidad
+- Cercania
+- Caracteristicas
+- Tamaño mascota
+- Tipo animal
+
+Escenario 1: Dado un gato y una lista de hogares, filtrar los hogares que acepten gatos.
+Escenario 2: Dado un perro y una lista de hogares, filtrar los hogares que acepten perros.
+Escenario 3: Dado un animal chico y una lista de hogares, filtrar los hogares que acepten animales chicos.
+Escenario 4: Dado un animal mediano y una lista de hogares, filtrar los hogares que acepten animales medianos.
+Escenario 5: Dado un animal grande y una lista de hogares, filtrar los hogares que acepten animales grandes.
+Escenario 6: Dado un animal y una lista de hogares sin capacidad disponible, filtrar los hogares y retornar
+una lista vacia.
+Escenario 7: Dado un animal y una lista de hogares, filtrar los hogares que tienen capacidad disponible.
+Escenario 8: Dado un animal, una lista de hogares y el radio preferido de un rescatista, filtrar los hogares
+mas cercanos.
+Escenario 9: Dado un animal, una lista de hogares y el radio preferido de un rescatista, filtrar los hogares
+mas cercanos y retornar una lista vacia.
+Escenario 10: Dado un animal y una lista de hogares, filtrar los hogares adecuados para la mascota segun sus
+caracteristicas.
+Escenario 11: Dado un animal y una lista de hogares, filtrar los hogares adecuados para la mascota segun sus
+caracteristicas y retornar una lista vacia.

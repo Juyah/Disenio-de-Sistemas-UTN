@@ -1,0 +1,65 @@
+body {
+    background-image: url(../imagenes/fondo-pagina.png);
+}
+
+#nav {
+    height: 7vh;
+}
+input{
+    width: 100%;
+}
+.col {
+    background-color:  rgb(235, 218, 242);
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(152, 89, 179);
+    align-content: center;
+    text-align: center;
+}
+
+.btn{
+    background-color: rgb(255, 224, 224);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+h2 {
+    padding: 10px;
+    background-color: rgb(235, 218, 242);
+    color: rgb(152, 89, 179);
+    text-align: center;
+    width: 80vw;
+    margin: 1vh auto auto;
+}
+
+.menu {
+    background-color: #e0e0e0;
+    width: 80vw;
+    height: auto;
+    margin: 5vh 10vw;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding-bottom: 5vh;
+}
+.rowMenu {
+    padding-top: 2vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+@media (max-width: 575px) {
+    #menu {
+        height: auto;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        background-color: transparent;
+        border: none;
+    }
+
+    .rowMenu {
+        margin: 0 auto;
+        padding-top: 1px;
+        padding-left: 3vh;
+        padding-right: 3vh;
+    }
+}
+

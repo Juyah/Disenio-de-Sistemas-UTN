@@ -1,0 +1,83 @@
+body {
+    background-image: url(../img/fondo-pagina.png);
+}
+
+#imagenPatita {
+    max-width: 2vw;
+}
+
+#nav {
+    height: 7vh;
+}
+
+input {
+    max-width: 50%;
+    margin: auto;
+}
+
+.col {
+    background-color: rgb(235, 218, 242);
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(152, 89, 179);
+    align-content: center;
+    text-align: center;
+}
+
+.btn {
+    background-color: rgb(255, 224, 224);
+    border: 2px solid rgb(0, 0, 0);
+    margin-top: 1vh;
+}
+
+h2 {
+    padding: 10px;
+    background-color: rgb(235, 218, 242);
+    color: rgb(152, 89, 179);
+    text-align: center;
+    width: 80vw;
+    margin: 1vh auto auto;
+}
+
+.menu {
+    background-color: #e0e0e0;
+    width: 80vw;
+    height: auto;
+    margin: 5vh 10vw;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding-bottom: 5vh;
+}
+
+.rowMenu {
+    padding-top: 2vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+@media (max-width: 767px) {
+    #imagenPatita {
+        max-width: 3vw;
+    }
+
+    input{
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 575px) {
+    #menu {
+        height: auto;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        background-color: transparent;
+        border: none;
+    }
+
+    .rowMenu {
+        margin: 0 auto;
+        padding-top: 1px;
+        padding-left: 3vh;
+        padding-right: 3vh;
+    }
+}
